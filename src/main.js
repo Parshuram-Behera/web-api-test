@@ -48,7 +48,7 @@ export default async ({ req, res, log, error }) => {
       return res.json({ success: true, downloadUrl });
     } catch (err) {
       error("Error fetching file URL: " + err.message);
-      return res.json({ success: false, error: "Failed to get file download URL" });
+      return res.json({ success: false, error: "Failed to get file download URL" + err.message });
     }
   }
 
